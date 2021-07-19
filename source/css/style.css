@@ -17,8 +17,8 @@ header {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background: #333;
-  height: 15vh;
+  background: #2e2e2e;
+  height: 150px;
   box-shadow: 0 0 10px 1px black;
 }
 header h1 {
@@ -56,7 +56,7 @@ header nav a:hover::after {
   display: block;
   align-content: center;
   content: "";
-  width: 30px;
+  width: 10%;
   height: 1px;
   position: relative;
   top: 5px;
