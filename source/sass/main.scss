@@ -1,26 +1,21 @@
-/*
+:root {
 
+    --size: 200px;
 
-    // ######### RESET #################
-* {
-
-    padding: 0;
-    margin: 0;
-
-    box-sizing: border-box;
+    --main: rgba(51, 51, 51, 0.37);
 
 }
 
-// ########## CSS ##################
-html,
 body {
 
-    overflow-x: hidden;
-
+    background: white;
+    color: var(--main);  
     font-family: 'Roboto', sans-serif;
 
-    width: 100vw;
-    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
 
 }
 
@@ -28,285 +23,319 @@ header {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    
 
-    background: rgb(46, 46, 46);
-    height: 150px;
-
-    box-shadow: 0 0 10px 1px black;
-
-    & h1 {
-
-        color: whitesmoke;
-        letter-spacing: 40px;
-        margin: 0 0 .5em 0;
-
-        font-size: 45px;
-        font-weight: 900;
-
-        text-shadow: 0 10px 15px black;
-
-    }
+    background: #333;
 
     & nav {
 
         display: flex;
+        width: 100%;
         justify-content: space-around;
-        width: 50%;
-        margin-bottom: 0em 0 0em 0;
-
-        & div {
-
-            display: flex;
-            flex-direction: column;
-           
-            
-
-
-
-        }
+        align-items: center;
+        margin-bottom: 1EM;
 
         & a {
 
             display: block;
-            height: 25px;
-            width: 110px;
-
             color: white;
             text-decoration: inherit;
-
-            font-weight: 300;
-            border: 1px solid transparent;
 
             &:hover {
 
                 transform: scale(1.1);
-                color: rgba(255, 255, 255, 0.8);
-
-                &::after {
-
-                    display: block;
-    
-                    align-content: center;
-                    content: '';
-                    width: 10%;
-                    height: 1px;
-
-                    position: relative;
-
-                    top: 5px;
-                    
-                    background: #fff;
-
-                }
+                text-decoration: underline;
+                transition: .5s;
 
             }
-
+    
         }
 
     }
 
 }
 
-*/
-
-:root {
---size: 200px;
---main: rgb(253, 45, 45);
-}
-body {
-background: rgba(22, 22, 22, 0.959);
-color: var(--main);  
-font-family: 'Roboto', sans-serif;
-}
-header {
-margin: 1rem auto 0;
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 90%;
-max-width: 1300px;
-}
 h1 {
-text-transform: uppercase;
-margin: 1rem;
-font-size: 3rem;
-letter-spacing: .5rem;
-text-shadow: 3px 0 0 black, 5px 0 0 black, 7px 0 0 black;
+
+    text-transform: uppercase;
+    margin: 1rem;
+    font-size: 3rem;
+    letter-spacing: 2rem;
+    color: white;
+    text-shadow: 3px 0 0 rgba(0, 0, 0, 0.74), 5px 0 0 rgba(0, 0, 0, 0.486), 7px 0 0 rgba(0, 0, 0, 0.288);
+
 }
+
 .fa-sign-out-alt {
-float: right;
-font-size: 2rem;
-cursor: pointer;
+
+    float: right;
+    font-size: 2rem;
+    cursor: pointer;
+
 }
+
 .expo {
-text-align: center;
-margin: 2rem 0 -2rem;
+
+    text-align: center;
+    margin: 2rem 0 -2rem;
+
 }
+
 h2 {
-font-family: 'Six Caps', sans-serif;
-font-size: 5rem;
-font-weight: 100;
-letter-spacing: .6rem;
-margin: 3rem 0 1rem;
-text-shadow: 2px 1px 0 rgba(255, 166, 0, 0.815);
+
+    color: #333;
+    font-family: 'Six Caps', sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: .6rem;
+    margin: 1rem 0 1rem;
+    text-shadow: 2px 1px 0 rgb(207, 197, 197);
+
 }
+
 h3 {
-text-shadow: 2px 1px 0 black;
+
+    text-shadow: 2px 1px 0 black;
+    color: rgb(128, 128, 128);
+    letter-spacing: 3px;
+    border-top: 2px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+
 }
+
 .container {
-margin: 0 auto;
-height: 500px;
-width: 940px;
-position: relative;
+
+    margin: 0 auto;
+    height: 500px;
+    width: 940px;
+    position: relative;
+
 }
+
 .container i {
-position: absolute;
-font-size: 3rem;
-top: 50%;
-transform: translateY(-50%);
-animation: scale 2s linear infinite;
-cursor: pointer;
+
+    position: absolute;
+    font-size: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: scale 2s linear infinite;
+    cursor: pointer;
+
 }
+
 @keyframes scale {
-0% {
-    transform: scale(1);
+
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1) translateX(2px);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
-50% {
-    transform: scale(1.1) translateX(2px);
-}
-100% {
-    transform: scale(1);
-}
-}
+
 .fa-chevron-right {
-right: 1px;
+
+    right: 1px;
+
 }
 
 .cube-container {
-background: url("https://i.ibb.co/tMYh3yY/CAEN-Musee-des-Beaux-Arts.jpg") no-repeat center/cover;
-width: 800px;
-height: 400px;
-box-shadow: 0 0 5px white;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-cursor: move;
+
+    background: url("https://i.ibb.co/tMYh3yY/CAEN-Musee-des-Beaux-Arts.jpg") no-repeat center/cover;
+    width: 800px;
+    height: 400px;
+    box-shadow: 0 0 5px white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: move;
+
 }
+
 /* SHADOW UNDER CUBE */
+
 .cube-container::after {
-content: '';
-display: block;
-position: absolute;
-left: 50%;
-bottom: -10px;
-transform: translateX(-50%);
-height: 10%;
-width: 290px;
-background: rgb(39, 39, 39);
-filter: blur(20px);
-z-index: 100;
+
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    height: 10%;
+    width: 290px;
+    background: rgb(39, 39, 39);
+    filter: blur(20px);
+    z-index: 100;
+
 }
 
 /* 3D CUBE PARAMETERS */
 .cube {
-margin: 5rem auto 0;
-width:var(--size);
-height:var(--size);
-transform-style: preserve-3d;  
-position: relative;
-animation: spin 1500s infinite linear;
+
+    margin: 5rem auto 0;
+    width:var(--size);
+    height:var(--size);
+    transform-style: preserve-3d;  
+    position: relative;
+    animation: spin 1500s infinite linear;
+
 }
 .front {
-transform: rotateY(-5deg) rotateZ(3deg) rotateX(10deg) !important;
+
+    transform: rotateY(-5deg) rotateZ(3deg) rotateX(10deg) !important;
+
 }
+
 .left {
-transform: rotateY(95deg) rotateZ(2deg) rotateX(-6deg) !important;
+
+    transform: rotateY(95deg) rotateZ(2deg) rotateX(-6deg) !important;
+
 }
+
 .right {
-transform: rotateY(-85deg) rotateZ(-2deg) rotateX(-10deg) !important;
+
+    transform: rotateY(-85deg) rotateZ(-2deg) rotateX(-10deg) !important;
+
 }
+
 .top {
-transform: rotateY(-5deg) rotateZ(6deg) rotateX(-90deg) !important;
+
+    transform: rotateY(-5deg) rotateZ(6deg) rotateX(-90deg) !important;
+
 }
+
 .bottom {
-transform: rotateY(-5deg) rotateZ(-12deg) rotateX(95deg) !important;
+
+    transform: rotateY(-5deg) rotateZ(-12deg) rotateX(95deg) !important;
+
 }
+
 .back {
-transform: rotateY(175deg) rotateZ(2deg) rotateX(9deg) !important;
+
+    transform: rotateY(175deg) rotateZ(2deg) rotateX(9deg) !important;
+
 }
+
 .side {
-position:absolute;
-opacity: 0.95;
-width:var(--size);
-height:var(--size);
-font-size: 4rem;
-font-weight: bold;
+
+    position:absolute;
+    opacity: 0.95;
+    width:var(--size);
+    height:var(--size);
+    font-size: 4rem;
+    font-weight: bold;
+
 }
+
 #front {
-background: url("https://i.ibb.co/prgJGWZ/juan1.jpg") no-repeat center/cover;
-transform: translateZ(calc(var(--size) / 2)); 
+
+    background: url("https://i.ibb.co/prgJGWZ/juan1.jpg") no-repeat center/cover;
+    transform: translateZ(calc(var(--size) / 2)); 
+
 }
+
 #top {
-background: url("https://i.ibb.co/my09jSh/juan2.jpg") no-repeat center/cover;
-transform: rotateX(-270deg) translateY(calc(-1 * ( var(--size) / 2 ) ) );
-transform-origin: top center;
+
+    background: url("https://i.ibb.co/my09jSh/juan2.jpg") no-repeat center/cover;
+    transform: rotateX(-270deg) translateY(calc(-1 * ( var(--size) / 2 ) ) );
+    transform-origin: top center;
+
 }
+
 #bottom {
-background: url("https://i.ibb.co/hFx6zd1/juan3.jpg") no-repeat center/cover;  
-transform: rotateX(270deg) translateY(calc( var(--size) / 2) );
-transform-origin: bottom center; 
+
+    background: url("https://i.ibb.co/hFx6zd1/juan3.jpg") no-repeat center/cover;  
+    transform: rotateX(270deg) translateY(calc( var(--size) / 2) );
+    transform-origin: bottom center; 
+
 }
+
 #right {
-background: url("https://i.ibb.co/NZVYykp/juan4.jpg") no-repeat center/cover;
-transform: rotateY(-270deg) translateX(calc( var(--size) / 2) );
-transform-origin: top right;
+
+    background: url("https://i.ibb.co/NZVYykp/juan4.jpg") no-repeat center/cover;
+    transform: rotateY(-270deg) translateX(calc( var(--size) / 2) );
+    transform-origin: top right;
+
 }
+
 #left {
-background: url("https://i.ibb.co/w65FSn5/juan5.jpg") no-repeat center/cover;
-transform: rotateY(270deg) translateX(calc(-1 * ( var(--size) / 2 ) ));
-transform-origin: center left;
+
+    background: url("https://i.ibb.co/w65FSn5/juan5.jpg") no-repeat center/cover;
+    transform: rotateY(270deg) translateX(calc(-1 * ( var(--size) / 2 ) ));
+    transform-origin: center left;
+
 }
+
 #back {
-background: url("https://i.ibb.co/hcnPYDK/juan6.jpg") no-repeat center/cover;
-transform: rotateY(-180deg) translateZ(calc(( var(--size) / 2 ) ));
+
+    background: url("https://i.ibb.co/hcnPYDK/juan6.jpg") no-repeat center/cover;
+    transform: rotateY(-180deg) translateZ(calc(( var(--size) / 2 ) ));
+
 }
+
 @keyframes spin {
     0% {
-    transform: rotateY(30deg) rotateZ(25deg) rotateX(8deg);  
-}
+        transform: rotateY(30deg) rotateZ(25deg) rotateX(8deg);  
+    }
     90% {
-    transform: rotateY(3600deg) rotateZ(3600deg) rotateX(3600deg);
-}
+        transform: rotateY(3600deg) rotateZ(3600deg) rotateX(3600deg);
+    }
 }
 
 /* USELESS BOTTOM PART */
 .content {
-display: flex;
-max-width: 900px;
-margin: 0 auto 4rem;
+
+    display: flex;
+    max-width: 100%;
+    
+    background: #333;
+
+
 }
+
 .column {
-padding: .1rem 1rem;
-margin: 1rem;
-border-radius: 5px 5px 0 0;
-border-bottom: 1px solid var(--main);
-box-shadow: 0 1px 1px 1px black;
-background: linear-gradient(100deg, rgb(32, 32, 32) 0%, rgb(19, 19, 19) 100%);
+
+    padding: .1rem 1rem;
+    margin: 1rem;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid var(--main);
+    box-shadow: 0 1px 1px 1px black;
+    background: linear-gradient(100deg, rgb(255, 255, 255) 0%, rgb(218, 217, 217) 100%);
+
 }
+
 .column i {
-margin-right: 6px;
+
+    margin-right: 6px;
+
 }
+
 .column h4 {
-color: orange
+
+    color: #333;
+    text-align: center;
+    font-weight: 900;
+
 }
+
 .column p {
-text-align: justify;
-display: -webkit-box;
--webkit-box-orient: vertical;
--webkit-line-clamp: 6;
-overflow: hidden;
+
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+
+    color: #333;
+
 }
   

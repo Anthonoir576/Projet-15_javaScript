@@ -1,141 +1,50 @@
-/*
-
-
-    // ######### RESET #################
-* {
-
-    padding: 0;
-    margin: 0;
-
-    box-sizing: border-box;
-
-}
-
-// ########## CSS ##################
-html,
-body {
-
-    overflow-x: hidden;
-
-    font-family: 'Roboto', sans-serif;
-
-    width: 100vw;
-    height: 100vh;
-
-}
-
-header {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
-    background: rgb(46, 46, 46);
-    height: 150px;
-
-    box-shadow: 0 0 10px 1px black;
-
-    & h1 {
-
-        color: whitesmoke;
-        letter-spacing: 40px;
-        margin: 0 0 .5em 0;
-
-        font-size: 45px;
-        font-weight: 900;
-
-        text-shadow: 0 10px 15px black;
-
-    }
-
-    & nav {
-
-        display: flex;
-        justify-content: space-around;
-        width: 50%;
-        margin-bottom: 0em 0 0em 0;
-
-        & div {
-
-            display: flex;
-            flex-direction: column;
-
-
-
-
-
-        }
-
-        & a {
-
-            display: block;
-            height: 25px;
-            width: 110px;
-
-            color: white;
-            text-decoration: inherit;
-
-            font-weight: 300;
-            border: 1px solid transparent;
-
-            &:hover {
-
-                transform: scale(1.1);
-                color: rgba(255, 255, 255, 0.8);
-
-                &::after {
-
-                    display: block;
-
-                    align-content: center;
-                    content: '';
-                    width: 10%;
-                    height: 1px;
-
-                    position: relative;
-
-                    top: 5px;
-
-                    background: #fff;
-
-                }
-
-            }
-
-        }
-
-    }
-
-}
-
-*/
 :root {
   --size: 200px;
-  --main: rgb(253, 45, 45);
+  --main: rgba(51, 51, 51, 0.37);
 }
 
 body {
-  background: rgba(22, 22, 22, 0.959);
+  background: white;
   color: var(--main);
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 header {
-  margin: 1rem auto 0;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  max-width: 1300px;
+  width: 100%;
+  background: #333;
+}
+header nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1EM;
+}
+header nav a {
+  display: block;
+  color: white;
+  text-decoration: inherit;
+}
+header nav a:hover {
+  transform: scale(1.1);
+  text-decoration: underline;
+  transition: 0.5s;
 }
 
 h1 {
   text-transform: uppercase;
   margin: 1rem;
   font-size: 3rem;
-  letter-spacing: 0.5rem;
-  text-shadow: 3px 0 0 black, 5px 0 0 black, 7px 0 0 black;
+  letter-spacing: 2rem;
+  color: white;
+  text-shadow: 3px 0 0 rgba(0, 0, 0, 0.74), 5px 0 0 rgba(0, 0, 0, 0.486), 7px 0 0 rgba(0, 0, 0, 0.288);
 }
 
 .fa-sign-out-alt {
@@ -150,16 +59,22 @@ h1 {
 }
 
 h2 {
+  color: #333;
   font-family: "Six Caps", sans-serif;
-  font-size: 5rem;
-  font-weight: 100;
+  font-size: 4rem;
+  font-weight: 600;
   letter-spacing: 0.6rem;
-  margin: 3rem 0 1rem;
-  text-shadow: 2px 1px 0 rgba(255, 166, 0, 0.815);
+  margin: 1rem 0 1rem;
+  text-shadow: 2px 1px 0 #cfc5c5;
 }
 
 h3 {
   text-shadow: 2px 1px 0 black;
+  color: gray;
+  letter-spacing: 3px;
+  border-top: 2px solid black;
+  border-bottom: 1px solid black;
+  padding: 10px 0;
 }
 
 .container {
@@ -308,8 +223,8 @@ h3 {
 /* USELESS BOTTOM PART */
 .content {
   display: flex;
-  max-width: 900px;
-  margin: 0 auto 4rem;
+  max-width: 100%;
+  background: #333;
 }
 
 .column {
@@ -318,7 +233,7 @@ h3 {
   border-radius: 5px 5px 0 0;
   border-bottom: 1px solid var(--main);
   box-shadow: 0 1px 1px 1px black;
-  background: linear-gradient(100deg, #202020 0%, #131313 100%);
+  background: linear-gradient(100deg, white 0%, #dad9d9 100%);
 }
 
 .column i {
@@ -326,7 +241,9 @@ h3 {
 }
 
 .column h4 {
-  color: orange;
+  color: #333;
+  text-align: center;
+  font-weight: 900;
 }
 
 .column p {
@@ -335,6 +252,7 @@ h3 {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 6;
   overflow: hidden;
+  color: #333;
 }
 
 /*# sourceMappingURL=style.css.map */
